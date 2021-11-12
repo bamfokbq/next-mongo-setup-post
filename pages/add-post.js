@@ -48,44 +48,43 @@ export default function AddPost() {
     };
 
     return (
-        <div>
-            <Nav />
-            <div className={styles.container}>
-                <form onSubmit={handlePost} className={styles.form}>
-                    {error ? (
-                        <div className={styles.formItem}>
-                            <h3 className={styles.error}>{error}</h3>
-                        </div>
-                    ) : null}
-                    {message ? (
-                        <div className={styles.formItem}>
-                            <h3 className={styles.message}>{message}</h3>
-                        </div>
-                    ) : null}
-                    <div className={styles.formItem}>
-                        <label>Title</label>
-                        <input
-                            type="text"
-                            name="title"
-                            onChange={(e) => setTitle(e.target.value)}
-                            value={title}
-                            placeholder="title"
-                        />
-                    </div>
-                    <div className={styles.formItem}>
-                        <label>Content</label>
-                        <textarea
-                            name="content"
-                            onChange={(e) => setContent(e.target.value)}
-                            value={content}
-                            placeholder="Post content"
-                        />
-                    </div>
-                    <div className={styles.formItem}>
-                        <button type="submit">Add post</button>
-                    </div>
-                </form>
+      <div>
+        <div className={styles.container}>
+          <form onSubmit={handlePost} className={styles.form}>
+            {error ? (
+              <div className={styles.formItem}>
+                <h3 className={styles.error}>{error}</h3>
+              </div>
+            ) : null}
+            {message ? (
+              <div className={styles.formItem}>
+                <h3 className={styles.message}>{message}</h3>
+              </div>
+            ) : null}
+            <div className={styles.formItem}>
+              <label>Title</label>
+              <input
+                type='text'
+                name='title'
+                onChange={(e) => setTitle(e.target.value)}
+                value={title}
+                placeholder='title'
+              />
             </div>
+            <div className={styles.formItem}>
+              <label>Content</label>
+              <textarea
+                name='content'
+                onChange={(e) => setContent(e.target.value)}
+                value={content}
+                placeholder='Post content'
+              />
+            </div>
+            <div className={styles.formItem}>
+              <button type='submit'>Add post</button>
+            </div>
+          </form>
         </div>
+      </div>
     );
 }

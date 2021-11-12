@@ -1,6 +1,4 @@
 import Head from 'next/head';
-
-import Nav from '../components/Nav';
 import PostCard from '../components/PostCard';
 import styles from '../styles/Home.module.css';
 
@@ -10,8 +8,6 @@ export default function Home({ posts }) {
             <Head>
                 <title>Home</title>
             </Head>
-
-            <Nav />
 
             <main>
                 <div className={styles.container}>
